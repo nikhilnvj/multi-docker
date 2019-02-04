@@ -14,9 +14,9 @@ after_success:
   - docker build -t nikhilnvj/multi-worker ./worker
   - docker build -t nikhilnvj/multi-nginx ./nginx
 # Login to the docker CLI
-- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 # Push to docker hub
-- docker push nikhilnvj/multi-client
-- docker push nikhilnvj/multi-server
-- docker push nikhilnvj/multi-worker
-- docker push nikhilnvj/multi-nginx
+  - docker push nikhilnvj/multi-client
+  - docker push nikhilnvj/multi-server
+  - docker push nikhilnvj/multi-worker
+  - docker push nikhilnvj/multi-nginx
